@@ -12,6 +12,7 @@
         *{
             margin: 0;
             padding: 0;
+            -webkit-box-sizing: border-box;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
@@ -19,41 +20,69 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             max-width: 1180px;
             width: 100%;
             border: 1px solid #ddd;
             border-radius: 4px;
+            -webkit-box-shadow: 0px 0px 10px 0px #ddd;
             box-shadow: 0px 0px 10px 0px #ddd;
         }
 
         .popUp-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             padding: 25px;
         }
 
         .col-60 {
             width: 60%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
         .col-40 {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             width: 40%;
             background: #D6D7D9;
             min-height: 280px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
         .inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
         }
 
@@ -85,7 +114,11 @@
         }
 
         ul.price-cal li {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
             margin-bottom: 5px;
             padding-right: 30px;
