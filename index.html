@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .popUp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 1180px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px 0px #ddd;
+        }
+
+        .popUp-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .col-60 {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-40 {
+            display: flex;
+            width: 40%;
+            background: #D6D7D9;
+            min-height: 280px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner h1 {
+            font-size: 34px;
+            line-height: 1em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00395C;
+        }
+
+        .inner p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .col-40 .inner h3 {
+            font-size: 22px;
+            font-weight: 400;
+            margin: 15px 0;
+            text-align: center;
+        }
+        ul.price-cal {
+            list-style: none;
+            background: #fff;
+            padding: 5px 20px;
+            margin-bottom: 20px;
+        }
+
+        ul.price-cal li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            padding-right: 30px;
+            padding-left: 5px;
+        }
+
+        ul.price-cal li span {
+            white-space: nowrap;
+            font-size: 15px;
+            line-height: 1.5em;
+        }
+
+        .col-40 .inner {
+            max-width: 330px;
+            width: 100%;
+        }
+
+        .col-40 .inner div {
+            width: 100%;
+        }
+
+        ul.price-cal li:last-child {
+            border-top: 1px solid #000;
+            margin-bottom: 0;
+        }
+        ul.price-cal li span p {
+            padding-top: 4px;
+            text-align: unset;
+        }
+        li.colored span{
+            color: #00395C;
+        }
+
+        @media screen and (max-width:1200px) {
+            .popUp {
+                max-width: 1180px;
+                width: 95%;
+            }
+            .col-60 .inner {
+                width: 95%;
+            }
+        }
+        @media screen and (max-width:1140px) {
+            .inner p br{
+                display: none;
+            }
+        }
+        @media screen and (max-width:1024px) and (min-width:768px) {
+            .col-40 .inner {
+                width: 95%;
+            }
+            
+            ul.price-cal {
+                padding: 5px 10px;
+                margin-bottom: 15px;
+            }
+
+            ul.price-cal li {
+                padding-right: 5px;
+            }
+
+            .inner h1 {
+                font-size: 30px;
+            }
+
+            .inner p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width:990px) and (min-width:768px) {
+            .col-60{
+                width: 55%;
+            }
+            .col-40{
+                width: 45%;
+            }
+            .col-40 .inner {
+                padding: 0 15px;
+            }
+        }
+        @media screen and (max-width:767px) {
+            .col-60{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .col-40{
+                width: 100%;
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="popUp">
+        <div class="popUp-content">
+            <div class="col-60">
+                <div class="inner">
+                    <div>
+                        <h1>How Your Rewards Balance Works</h1>
+                        <p>Each time you make a qualifying purchase the amount you are<br> saving gets deducted from your Rewards balance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-40">
+                <div class="inner">
+                    <div>
+                        <h3>Your Balance: $250</h3>
+                        <ul class="price-cal">
+                            <li>
+                                <span>Average Public Price:</span>
+                                <span>$200</span>
+                            </li>
+                            <li class="colored">
+                                <span>Qualifying Reward Dollars:</span>
+                                <span>$110</span>
+                            </li>
+                            <li>
+                                <span><p>You Pay:</p></span>
+                                <span><p>$90</p></span>
+                            </li>
+                        </ul>
+                        <h3>NEW Balance: $140</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
